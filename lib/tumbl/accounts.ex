@@ -1,5 +1,5 @@
-defmodule Rumbl.Accounts do
-  alias Rumbl.Accounts.User
+defmodule Tumbl.Accounts do
+  alias Tumbl.Accounts.User
 
   def list_users do
     [
