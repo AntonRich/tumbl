@@ -18,4 +18,14 @@ defmodule Tumbl.Accounts do
     Repo.all(User)
   end
 
+  # this functions receives a User struct and returns an Ecto.Changeset
+  def change_user(%User{} = user) do
+    User.changeset(user, %{})
+  end
+
+  def create_user(attrs \\ %{}) do
+    %User{}
+    |> User.changeset(attrs)
+    |> Repo.insert
+  end
 end
