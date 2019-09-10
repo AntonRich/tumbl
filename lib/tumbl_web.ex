@@ -23,6 +23,7 @@ defmodule TumblWeb do
 
       import Plug.Conn
       import TumblWeb.Gettext
+      import TumblWeb.Auth, only: [authenticate_user: 2]
       alias TumblWeb.Router.Helpers, as: Routes
     end
   end
@@ -50,6 +51,7 @@ defmodule TumblWeb do
       use Phoenix.Router
       import Plug.Conn
       import Phoenix.Controller
+      import TumblWeb.Auth, only: [authenticate_user: 2]
     end
   end
 

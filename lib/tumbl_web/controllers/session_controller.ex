@@ -16,7 +16,7 @@ defmodule TumblWeb.SessionController do
         |> put_flash(:info, "Welcome Back!")
         |> redirect(to: Routes.page_path(conn, :index))
       
-      {:error, reason} ->
+      {:error, _reason} ->
         conn
         |> put_flash(:info, "Invalid username/password combination") 
         |> render("new.html")
